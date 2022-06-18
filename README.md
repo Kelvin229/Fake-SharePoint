@@ -11,7 +11,7 @@ We are also able to register users into a csv database in the server.
 The main website is the welcome_get.php file that welcomes the user to upload or register their login information into a csv file.
 
 Currently, my plan is to fix the fact that empty spaces keep saving into the database which 
-will not be a good experience for the databse managers if this was a real company experience.
+will not be a good experience for the a database managers if this was a real industrial software engineering experience.
 
 I have been busy with school currently and will make sure this project is complete by the end of August 2022 to be well precentable.
 
