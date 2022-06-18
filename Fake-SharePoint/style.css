@@ -1,0 +1,375 @@
+  /*author: Kelvin Odinamadu
+    COSC 2P89
+    Assign_4
+ */ 
+
+ @import url("https://fonts.googleapis.com/css2?family=Hind&display=sawp%27");
+
+            :root {
+                --accent-1-color: #edfc44;
+                --top-bar-color: #001e33;
+                --top-bar-border-color: #7ab8ff;
+                --title-color: #003c66;
+                --menu-color: #005999;
+                --accent-2-color: #ff6600;
+                --side-content-color: #d7ddd1;
+                --footer-border-color: #1e96ff;
+                --footer-color: #001e33;
+            }
+
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+
+body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0px auto;
+                width: 800px;
+                height: 100vh;
+                display: table-footer-group;
+               display: table-header-group;
+               grid-template-rows: auto 1fr auto;
+               grid-template-rows: auto 1fr auto;
+    
+
+            }
+
+.total{
+    width: 100vw;
+}
+
+/*Deconstructive pancake*/
+
+ @media only screen and (max-width: 600px){
+    div.total{
+    display: inline;
+    flex-wrap: wrap;
+    justify-content: 100%;
+}
+
+}      
+
+
+/*Pancake stack*/
+@media screen and (max-width: 600px){
+    div.side {
+    display: inline-grid;
+  }
+}
+
+/*Responsive media query body grids: */
+@media only screen and (max-width:800px) {
+  /* Responsive media query For tablets: */
+   div.footer {
+    width: 100%;
+    padding: 0;
+  }
+}
+/*Resizing the browser window*/
+@media only screen and (max-width:500px) {
+  /* Responsive media query For mobile phones: */
+  div.follow {
+    width: 100%;
+  }
+}
+
+            /* Top Bar */
+            #top-bar {
+                background-color: var(--top-bar-color);
+                overflow: hidden;
+                border-bottom: 1px solid var(--top-bar-border-color);
+            }
+
+            #top-bar p {
+                color: #ffffff;
+                font-size: 11px;
+                padding: 7px 30px;
+            }
+
+            #top-bar a {
+                color: var(--accent-1-color);
+            }
+
+            #welcome-guest {
+                float: left;
+            }
+
+            #stay-updated {
+                float: right;
+            }
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+            /* Title */
+            #title {
+                background-color: var(--title-color);
+                border-bottom: 1px solid #ffffff;
+                color: #ffffff;
+                font-family: Hind;
+                padding: 30px;
+            }
+
+            #title h1 {
+                float: left;
+                padding-right: 30px;
+                margin-top: -13px;
+            }
+
+            /* Menu */
+            #menu {
+                background-color: var(--menu-color);
+                padding: 12px 30px;
+            }
+
+            #menu li {
+                display: inline;
+                padding-right: 15px;
+                user-select: none;
+            }
+
+            #menu li a {
+                color: #000000;
+                text-decoration: none;
+            }
+
+            #hover:hover {
+                color: #ffffff;
+            }
+
+            /* Content */
+            #content {
+                font-size: 11px;
+                margin: 0px 30px;
+                overflow: hidden;
+            }
+
+            #main {
+                float: left;
+                padding: 23px 0px;
+                width: 66%;
+            }
+
+            #main .description {
+                padding: 2px 0px 0px 0px;
+            }
+
+            #main a {
+                color: var(--accent-2-color);
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            #main blockquote {
+                border-left: 2px solid var(--accent-2-color);
+                margin-left: 20px;
+                padding-left: 10px;
+            }
+
+            #main h2 {
+                font-size: 20px;
+                padding-top: 7px;
+            }
+
+            #main h3 {
+                padding-top: 7px;
+                padding-bottom: 7px;
+            }
+
+            #main h4 {
+                padding-bottom: 3px;
+            }
+
+            
+            #main p {
+                padding: 7px 0px;
+            }
+
+            #main ul {
+                list-style-position: inside;
+                padding-left: 20px;
+            }
+            
+            #main ol {
+                list-style-position: inside;
+                padding: 4px 0px 7px 15px;
+            }
+
+            #side {
+                background-color: var(--side-content-color);
+                float: right;
+                width: 30%;
+            }
+
+            #side aside {
+                padding: 20px;
+            }
+
+            #side h4 {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+
+            #side ul {
+                list-style: none;
+            }
+
+            #side li {
+                padding-top: 3px;
+            }
+
+            #side li a {
+                color: #000000;
+                margin-left: 20px;
+                text-decoration: none;
+            }
+
+            /* Footer */
+            #footer {
+                background-color: var(--footer-color);
+                border-top: 2px solid var(--footer-border-color);
+                color: var(--accent-1-color);
+                font-size: 13px;
+                overflow: hidden;
+                padding: 15px 30px;
+            }
+
+            #footer h4 {
+                font-weight: bold;
+                padding-bottom: 7px;
+            }
+
+            #footer ul {
+                list-style: none;
+            }
+
+            #footer li a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            #links {
+                float: left;
+                width: 40%;
+            }
+
+            #follow {
+                float: left;
+                padding-left: 20px;
+                width: 40%;
+            }
+
+            #copyright {
+                float: left;
+                text-align: right;
+                width: 17%;
+            }
+
+
+/* Style the tab buttons */
+.tablink{
+  background-color: var(--menu-color);
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 10px;
+  width: 8%;
+}
+
+ /* Change background color of buttons on hover */
+.tablink:hover {
+  background-color: #1EA933;
+}
+
+
+/* Style each tab content individually */
+#Home {background-color:#16E2BC;}
+#About {background-color:#16E2BC;}
+#Courses {background-color:#16E2BC;}
+#Education {background-color:#E61542;}
+#Skills {background-color:#16E2BC;}
+#CV {background-color:#16E2BC;}
+
+
+.portrait {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid yellowgreen;
+}
+
+.portrait img {
+  width: 100%;
+  height: auto;
+}
+.logo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid darkred;
+  background-color: darkred;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+.tabcontent {
+    padding-left: 10px;
+    padding-bottom: 10px;
+  animation: fadeEffect 2s; /* Fading effect takes 1 second */
+}
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.Education{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background-color: white;
+    width: 40%;
+    height: 10%;
+    
+}
